@@ -1,17 +1,3 @@
-//In the below code, user choice will always be door 1 and the user will stick with their choice.
-
-/*var winningcount = 0;
-
-for (i=0; i<10; i++) {
-    var cardoor = Math.floor((Math.random() * 3) + 1);
-    console.log(cardoor);
-    if (cardoor === 1) {
-        winningcount = (winningcount + 1);
-    };
-};
-
-alert(winningcount); */
-
 var winningcount = 0;
 
 var doorChoices = [1,2,3,4];
@@ -21,11 +7,12 @@ var newUserChoice;
 for (i=0; i<10000; i++) {
     var firstUserChoicePicker = Math.floor((Math.random() * 3) + 1);
     var firstUserChoice = doorChoices.indexOf((firstUserChoicePicker)+1);
-    console.log(firstUserChoice);
-    /*
+    console.log("The user chooses " + firstUserChoice);
+    
     var cardoor= Math.floor((Math.random() *3) + 1);
-    console.log(cardoor);
+    console.log("The car is behind " + cardoor);
 
+/*
     //Newdoorpicker randomly selects door 2 or 3.
     var newDoorPicker = Math.floor((Math.random() *100) + 1);
 
@@ -36,11 +23,13 @@ for (i=0; i<10000; i++) {
     };
 
     console.log("Final user choice is " + newUserChoice);
-
-    if (cardoor == newUserChoice) {
+*/
+    if (cardoor == firstUserChoice) {
         winningcount = (winningcount + 1);
         console.log("You win the car!!!");
-    }; */
+    }; 
+
+    console.log(" ");
 };
 
 alert("You won the car " + winningcount + " times!")
