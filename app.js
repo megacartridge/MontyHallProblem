@@ -1,13 +1,23 @@
 var winningcount = 0;
 
-var doorChoices = [1,2,3,4];
-
-var newUserChoice;
+var newUserChoice; //Final choice user will make.
 
 for (i=0; i<10000; i++) {
-    var firstUserChoicePicker = Math.floor((Math.random() * 3) + 1);
-    var firstUserChoice = doorChoices.indexOf((firstUserChoicePicker)+1);
+    //Initialize the three doors. Get rid or "door zero."
+    var doorChoices = [0,1,2,3];
+    doorChoices.shift();
+    
+    //The possible user choices. Uncomment one.
+    //var firstUserChoice = 1;
+    //var firstUserChoice = 2;
+    //var firstUserChoice = 3;
+   
     console.log("The user chooses " + firstUserChoice);
+
+    //Remove firstUserChoice from doorChoices
+    doorChoices.splice( (firstUserChoice-1), 1 );
+
+    console.log (doorChoices);
     
     var cardoor= Math.floor((Math.random() *3) + 1);
     console.log("The car is behind " + cardoor);
