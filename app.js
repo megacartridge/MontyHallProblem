@@ -2,7 +2,7 @@ var firstUserChoice; //First choice user will make.
 
 var newUserChoice; //Final choice user will make.
 
-var carDoor;//Math.floor((Math.random() *3) + 1); //The number the car is behind.
+var carDoor = Math.floor((Math.random() *3) + 1); //The number the car is behind.
 
 var revealedDoor; //The door with the donkey that will be opened after the user makes their first choice.
 
@@ -17,62 +17,44 @@ var revealedDoor; //The door with the donkey that will be opened after the user 
         firstUserChoice = 1;
 
         //carDoor is random number between 1 and 3.
-        carDoor = Math.floor((Math.random() *3) + 1);
-        alert(carDoor);
+        console.log("Cardoor is " + carDoor);
+        console.log(doorChoices);
+        doorChoices.splice( (carDoor-1), 1 );
+        
+        
+        console.log(doorChoices);
         console.log("The user chooses " + firstUserChoice);
 
-        //Remove firstUserChoice from doorChoices
-        //Maybe don't need to do this.
+        //Remove firstUserChoice from doorChoices.
         doorChoices.splice( (firstUserChoice-1), 1 );
 
 
         //revealedDoor is an incorrect choice given after firstUserChoice.
-        //Can this be done with a switch statement???????????
-        if (carDoor === 1) {
-            revealedDoor = doorChoices[Math.floor(Math.random()*doorChoices.length)];
-        } else {
-            revealedDoor = "Didn't get it!"
-        };
+
+        revealedDoor = doorChoices;
 
         console.log (doorChoices);
 
-        console.log("To help you out, I'll let you know the car is NOT behind " + (revealedDoor));
-
         console.log("If you want to keep your choice, click on 1. otherwise click on the other possible choice.");
+
+        console.log("To help you out, I'll let you know the car is NOT behind " + (revealedDoor) + " because carDoor is " + carDoor);
+
 
         //Add onclick event here.
 
         console.log("The car is behind " + carDoor);
 
-        if (carDoor === newUserChoice) {
+        if (carDoor === firstUserChoice) {
             console.log("CONGRATULATIONS! THE CAR IS YOURS!");
         } else {
-            console.log("Congratulations. You just won a nice donkey");
+            console.log("Congratulations. You just won a nice donkey because the car is behind " + carDoor);
         };
 
 
     };
 
     function Door2() {
-        firstUserChoice = 2;
-        carDoor = Math.floor((Math.random() *3) + 1);
-        alert(carDoor);
-        console.log("The user chooses " + firstUserChoice);
-
-        //Remove firstUserChoice from doorChoices
-        doorChoices.splice( (firstUserChoice-1), 1 );
-
-        if (carDoor = 2) {
-            revealedDoor = doorChoices[Math.floor(Math.random()*doorChoices.length)];
-        } else {
-            revealedDoor = "Didn't get it!"
-        };
-
-        console.log (doorChoices);
-
-        console.log("To help you out, I'll let you know the car is NOT behind " + (revealedDoor));
-
-        console.log("The car is behind " + carDoor);
+        console.log("You picked door 2!");
 
 
     };
