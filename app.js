@@ -40,8 +40,14 @@ var revealedDoor; //The door with the donkey that will be opened after the user 
         console.log("To help you out, I'll let you know the car is NOT behind " + (revealedDoor) + " because carDoor is " + carDoor);
 
 
-        //Add onclick event here.
+        //Below onclick function should allow user to change their choice to Door 2.
+/*
+    document.getElementById("Two").onclick = function() {newUserChoiceFunction()};
 
+    function newUserChoiceFunction() {
+        newUserChoice = 2;
+    }
+*/
         console.log("The car is behind " + carDoor);
 
         if (carDoor === firstUserChoice) {
