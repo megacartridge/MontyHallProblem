@@ -41,21 +41,31 @@ var revealedDoor; //The door with the donkey that will be opened after the user 
 
 
         //Below onclick function should allow user to change their choice to Door 2.
-/*
-    document.getElementById("Two").onclick = function() {newUserChoiceFunction()};
 
-    function newUserChoiceFunction() {
+    document.getElementById("One").onclick = function() {staysWithDoorOne()};
+    document.getElementById("Two").onclick = function() {changesToDoorTwo()};
+    document.getElementById("Three").onclick = function() {changesToDoorThree()};
+
+    function staysWithDoorOne() {
+        newUserChoice = 1;
+    };
+
+    function changesToDoorTwo() {
         newUserChoice = 2;
-    }
-*/
-        console.log("The car is behind " + carDoor);
+    };
 
-        if (carDoor === firstUserChoice) {
+    function changesToDoorThree() {
+        newUserChoice = 3;
+    };
+
+        
+   console.log("The car is behind " + carDoor);
+
+        if (carDoor === newUserChoice) {
             console.log("CONGRATULATIONS! THE CAR IS YOURS!");
         } else {
             console.log("Congratulations. You just won a nice donkey because the car is behind " + carDoor);
         };
-
 
     };
 
@@ -69,26 +79,3 @@ var revealedDoor; //The door with the donkey that will be opened after the user 
         console.log("You picked door 3!");
     };
    
-    /*
-    console.log("The user chooses " + firstUserChoice);
-
-    //Remove firstUserChoice from doorChoices
-    doorChoices.splice( (firstUserChoice-1), 1 );
-
-    console.log (doorChoices);
-    
-    var carDoor= Math.floor((Math.random() *3) + 1);
-    console.log("The car is behind " + carDoor);
-
-
-    //Newdoorpicker randomly selects door 2 or 3.
-    var newDoorPicker = Math.floor((Math.random() *100) + 1);
-
-    if (newDoorPicker % 2 == 0) {
-        newUserChoice = 2;
-    } else {
-        newUserChoice = 3;
-    };
-
-    console.log("Final user choice is " + newUserChoice);
-*/
